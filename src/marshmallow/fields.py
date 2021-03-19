@@ -761,6 +761,10 @@ class List(Iterable):
     iterable_type = list
 
 
+class Set(Iterable):
+    iterable_type = set
+
+
 class Tuple(Field):
     """A tuple field, composed of a fixed number of other `Field` classes or
     instances
