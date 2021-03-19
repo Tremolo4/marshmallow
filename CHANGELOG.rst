@@ -1,6 +1,14 @@
 Changelog
 ---------
 
+3.11.0 (unreleased)
+*******************
+
+Features:
+
+- Add fields.Iterable as a base class for collection field types (:issue:`1263`).
+  Thanks :user:`Fongshway` for the PR.
+
 3.10.0 (2020-12-19)
 *******************
 
