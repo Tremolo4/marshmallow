@@ -36,6 +36,7 @@ __all__ = [
     "Dict",
     "Iterable",
     "List",
+    "Set",
     "Tuple",
     "String",
     "UUID",
@@ -763,6 +764,13 @@ class List(Iterable):
 
 class Set(Iterable):
     iterable_type = set
+
+    def _serialize(
+        self, value, attr, obj, **kwargs
+    ) -> typing.Optional[typing.List[typing.Any]]:
+        if value is None:
+            return None
+        return [self.inner._serialize(each, attr, obj, **kwargs) for each in value]
 
 
 class Tuple(Field):
